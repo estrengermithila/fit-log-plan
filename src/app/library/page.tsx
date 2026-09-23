@@ -1,8 +1,14 @@
 import LibraryCard from "@/components/LibraryCard";
+import { libraryType } from "@/type/libraryType";
 
 
-const getAllData = async()=>{
+const getAllData = async():Promise<libraryType[]>=>{
     const res = await fetch('http://localhost:3000/data.json')
+    
+    if(!res.ok){
+        throw new Error("Failed To Data Fetch")
+    }
+    
     return res.json()
 }
 

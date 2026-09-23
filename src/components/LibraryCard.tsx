@@ -4,8 +4,9 @@ import Image from "next/image";
 import { FiClock, FiStar } from "react-icons/fi";
 import { FaFire } from "react-icons/fa";
 import Link from "next/link";
+import { libraryType } from "@/type/libraryType";
 
-const LibraryCard = ({ library }) => {
+const LibraryCard = ({ library }:{library:libraryType}) => {
   return (
     <Link href={`/library/${library.id}`}>
     <div className="group overflow-hidden rounded-2xl border border-white/10 bg-[#15171d] shadow-lg transition-all duration-300 hover:-translate-y-1">
