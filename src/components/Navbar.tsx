@@ -9,7 +9,7 @@ const Navbar = () => {
     <li><Link href='/plan'>My Plan</Link></li>
     </>
     return (
-        <div>
+        <div className="">
             <div className="navbar bg-base-100 shadow-sm">
   <div className="navbar-start">
     <div className="dropdown">
@@ -33,7 +33,7 @@ const Navbar = () => {
     
     </ul>
   </div>
-  <div className="navbar-end">
+  <div className="navbar-end text-white">
   <div className="flex gap-4">
      <div className="flex gap-2">
     <p className="font-bold">Plan</p>

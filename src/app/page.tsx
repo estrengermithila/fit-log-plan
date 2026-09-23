@@ -1,6 +1,13 @@
+import Banner from "@/components/Banner";
+import AllLibrary from "./library/page";
 
 export default function Home() {
   return (
-   <h1>banner</h1>
+ <main>
+   <Banner></Banner>
+
+    <AllLibrary></AllLibrary>
+ </main>
+
   );
 }
