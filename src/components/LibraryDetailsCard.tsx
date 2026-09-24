@@ -2,6 +2,8 @@ import React from "react";
 import Image from "next/image";
 import { FiBookmark, FiCalendar } from "react-icons/fi";
 import { libraryType } from "@/type/libraryType";
+import TodaysPlanBtn from "./TodaysPlanBtn";
+import SaveLaterBtn from "./SaveLaterBtn";
 
 const LibraryDetailsCard = ({ data }: { data: libraryType }) => {
   return (
@@ -150,15 +152,9 @@ const LibraryDetailsCard = ({ data }: { data: libraryType }) => {
           {/* Buttons */}
           <div className="mt-7 flex flex-wrap gap-3">
 
-            <button className="flex items-center gap-2 rounded-lg bg-[#baff00] px-5 py-3 text-sm font-bold text-black transition hover:bg-[#caff33]">
-              <FiCalendar size={16} />
-              Add to today&apos;s plan
-            </button>
+         <TodaysPlanBtn data={data}></TodaysPlanBtn>
 
-            <button className="flex items-center gap-2 rounded-lg border border-white/20 px-5 py-3 text-sm text-gray-300 transition hover:bg-white/5">
-              <FiBookmark size={16} />
-              Save for later
-            </button>
+        <SaveLaterBtn data={data}></SaveLaterBtn>
 
           </div>
 
