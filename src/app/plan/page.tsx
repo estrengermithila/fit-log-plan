@@ -1,5 +1,6 @@
 'use client'
 import LibraryDetailsCard from '@/components/LibraryDetailsCard';
+import TodaysPlanCard from '@/components/TodaysPlanCard';
 import { FitContext } from '@/context/FitProvider';
 import React, { useContext } from 'react';
 
@@ -26,12 +27,12 @@ const Plan = () => {
 <div className="tabs tabs-lift">
   <input type="radio" name="my_tabs_3" className="tab" aria-label="Today's Plan" />
   <div className="tab-content bg-base-100 border-base-300 p-6">{
-    todayPlan.map(data=><LibraryDetailsCard key={data.id} data={data}></LibraryDetailsCard>)
+    todayPlan.map(data=><TodaysPlanCard key={data.id} data={data}></TodaysPlanCard>)
     }</div>
 
   <input type="radio" name="my_tabs_3" className="tab" aria-label="Saved" defaultChecked />
   <div className="tab-content bg-base-100 border-base-300 p-6">{
-    savePlan.map(data=><LibraryDetailsCard key={data.id} data={data}></LibraryDetailsCard>)
+    savePlan.map(data=><TodaysPlanCard key={data.id} data={data}></TodaysPlanCard>)
     }</div>
 
 
