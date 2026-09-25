@@ -59,10 +59,12 @@ const Navbar = () => {
     <PlanBtn></PlanBtn>
    </div>
      </Link>
+   <Link href='/plan'>
    <div className="flex gap-2">
     <p className="font-bold">Saved</p>
   <SaveBtn></SaveBtn>
    </div>
+   </Link>
   </div>
   </div>
 </div>
