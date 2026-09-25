@@ -17,12 +17,32 @@ const TodaysPlanBtn = ({data}:todaysPlanProps) => {
 
   if (!context) return null;
 
-  const { todayPlan, setTodayPlan } = context;   
+  const { todayPlan, setTodayPlan,plan,setPlan } = context;   
 
 
 const handleTodayPlan = ()=>{
         console.log('btn clicked')
-        setTodayPlan([...todayPlan,data])
+
+const newTodayPlanBtn = todayPlan.find(plan=>plan.id===data.id)
+if(newTodayPlanBtn){
+    alert('already added')
+    return
+}
+else{
+      setTodayPlan([...todayPlan,data])
+      const newPlan = plan+1
+      setPlan(newPlan)
+}
+
+
+    //     setTodayPlan([...todayPlan,data])
+    //     const newPlan = plan+1
+    //     if(!newPlan){
+    //         alert("already added")
+    //     }
+    //    else{
+    //      setPlan(newPlan)
+    //    }
     }
     return (
         <div>

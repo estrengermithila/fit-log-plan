@@ -23,13 +23,18 @@ const FitProvider = ({ children }: PropsWithChildren) => {
 
   const [savePlan, setSavePlan] = useState<libraryType[]>([]);
 
-  
+  const [plan,setPlan] = useState(0)
+  const [save,setSave] = useState(0)
 
   const shareData = {
     todayPlan,
     setTodayPlan,
     savePlan,
     setSavePlan,
+    plan,
+    setPlan,
+    save,
+    setSave
   };
 
   return (

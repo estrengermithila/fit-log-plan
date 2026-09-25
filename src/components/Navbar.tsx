@@ -1,6 +1,8 @@
 import Link from "next/link";
 import logo from '@/assets/logo.png'
 import Image from "next/image";
+import PlanBtn from "./PlanBtn";
+import SaveBtn from "./SaveBtn";
 
 
 const Navbar = () => {
@@ -37,11 +39,11 @@ const Navbar = () => {
   <div className="flex gap-4">
      <div className="flex gap-2">
     <p className="font-bold">Plan</p>
-    <button>0</button>
+    <PlanBtn></PlanBtn>
    </div>
    <div className="flex gap-2">
     <p className="font-bold">Saved</p>
-    <button>0</button>
+  <SaveBtn></SaveBtn>
    </div>
   </div>
   </div>
