@@ -3,13 +3,18 @@ import { libraryType } from "@/type/libraryType";
 
 
 const getAllData = async():Promise<libraryType[]>=>{
-    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/data.json`)
+ try{
+       const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/data.json`)
     
-    if(!res.ok){
-        throw new Error("Failed To Data Fetch")
-    }
+    // if(!res.ok){
+    //     throw new Error("Failed To Data Fetch")
+    // }
     
     return res.json()
+ }
+ catch(error){
+    return []
+ }
 }
 
 const AllLibrary = async() => {
