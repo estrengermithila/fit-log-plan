@@ -3,15 +3,22 @@ import logo from '@/assets/logo.png'
 import Image from "next/image";
 import PlanBtn from "./PlanBtn";
 import SaveBtn from "./SaveBtn";
+import ActiveLink from "./ActiveLink";
+
 
 
 const Navbar = () => {
     const links = <>
-    <li><Link href='/'>WorkOuts</Link></li>
-    <li><Link href='/plan'>My Plan</Link></li>
+    <li>
+      <ActiveLink href="/">WorkOut</ActiveLink>
+      
+      </li>
+    <li>    <ActiveLink href="/plan">
+          My Plan
+        </ActiveLink></li>
     </>
     return (
-        <div className="">
+        <div className="sticky top-0 z-50">
             <div className="navbar bg-base-100 shadow-sm">
   <div className="navbar-start">
     <div className="dropdown">
@@ -25,8 +32,17 @@ const Navbar = () => {
       
       </ul>
     </div>
-    <Image src={logo} alt="fit-logo"></Image>
-    <a className="btn btn-ghost text-xl">FitLog</a>
+<Link href="/" className="flex items-center gap-2">
+          <Image
+            src={logo}
+            alt="FitLog logo"
+            width={40}
+            height={40}
+            className="object-contain"
+          />
+
+          <span className="text-xl font-bold">FitLog</span>
+        </Link>
 
   </div>
   <div className="navbar-center hidden lg:flex">

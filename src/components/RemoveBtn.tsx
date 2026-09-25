@@ -4,6 +4,7 @@ import { FitContext } from '@/context/FitProvider';
 import { libraryType } from '@/type/libraryType';
 import React, { useContext } from 'react';
 import { FiX } from 'react-icons/fi';
+import { toast } from 'react-toastify';
 interface RemoveBtnProps {
   data: libraryType;
   type: 'today' | 'saved';
@@ -21,6 +22,17 @@ const RemoveBtn = ({data,type}:RemoveBtnProps) => {
    if(type==='today'){
         const dltData = todayPlan.filter(prev=>prev.id!==data.id)
        setTodayPlan(dltData)
+       toast.success(`Successfully ${data.name} remove`, {
+position: "top-center",
+autoClose: 5000,
+hideProgressBar: false,
+closeOnClick: false,
+pauseOnHover: true,
+draggable: true,
+progress: undefined,
+theme: "light",
+
+});
       //  const remainingPlan = plan-1
       //   setPlan(remainingPlan)
    }
@@ -29,6 +41,17 @@ const RemoveBtn = ({data,type}:RemoveBtnProps) => {
       if(type==='saved'){
          const dltSaveData = savePlan.filter(prev=>prev.id!==data.id)
        setSavePlan(dltSaveData)
+       toast.success(`Successfully ${data.name} remove`, {
+       position: "top-center",
+       autoClose: 5000,
+       hideProgressBar: false,
+       closeOnClick: false,
+       pauseOnHover: true,
+       draggable: true,
+       progress: undefined,
+       theme: "light",
+       
+       });
       //  const remainingSavePlan = save-1
       //   setSave(remainingSavePlan)
       }

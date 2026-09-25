@@ -9,9 +9,11 @@ const PlanBtn = () => {
 
   const { todayPlan } = context;
     return (
-        <div>
-            <button>{todayPlan.length}</button>
-        </div>
+         <div className="flex h-8 min-w-8 items-center justify-center rounded-full bg-green-700 px-2">
+      <button className="text-sm font-bold text-white">
+        {todayPlan.length}
+      </button>
+    </div>
     );
 };
 

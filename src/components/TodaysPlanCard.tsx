@@ -12,7 +12,7 @@ interface TodaysPlanCardProps {
 
 const TodaysPlanCard = ({ data,type }: TodaysPlanCardProps) => {
   return (
-    <div className="flex items-center justify-between gap-5 mb-5 rounded-xl border border-[#252a34] bg-[#151922] p-3">
+    <div className="flex flex-col md:flex-row items-center justify-between gap-5 mb-5 rounded-xl border border-[#252a34] bg-[#151922] p-3">
 
       {/* Left Side */}
       <div className="flex items-center  gap-4">
@@ -65,7 +65,7 @@ const TodaysPlanCard = ({ data,type }: TodaysPlanCardProps) => {
       </div>
 
       {/* Right Side */}
-      <div className="flex items-center gap-3">
+      <div className="flex  items-center gap-3">
 
         {/* View Details */}
         <Link href={`/library/${data.id}`}>
