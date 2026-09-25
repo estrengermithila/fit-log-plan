@@ -53,10 +53,12 @@ const Navbar = () => {
   </div>
   <div className="navbar-end text-white">
   <div className="flex gap-4">
+     <Link href='/plan'>
      <div className="flex gap-2">
     <p className="font-bold">Plan</p>
     <PlanBtn></PlanBtn>
    </div>
+     </Link>
    <div className="flex gap-2">
     <p className="font-bold">Saved</p>
   <SaveBtn></SaveBtn>
