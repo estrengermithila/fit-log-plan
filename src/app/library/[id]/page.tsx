@@ -8,7 +8,7 @@ interface LibraryDetailsProps {
 }
 
 const getAllData = async (): Promise<libraryType[]> => {
-  const res = await fetch("http://localhost:3000/data.json");
+  const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/data.json`);
 
   if (!res.ok) {
     throw new Error("Failed To Fetch Data");
