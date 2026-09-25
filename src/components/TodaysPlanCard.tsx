@@ -3,12 +3,14 @@ import React from "react";
 import { FiClock, FiStar, FiX } from "react-icons/fi";
 import { libraryType } from "@/type/libraryType";
 import Link from "next/link";
+import RemoveBtn from "./RemoveBtn";
 
 interface TodaysPlanCardProps {
   data: libraryType;
+  type: "today" | "saved";
 }
 
-const TodaysPlanCard = ({ data }: TodaysPlanCardProps) => {
+const TodaysPlanCard = ({ data,type }: TodaysPlanCardProps) => {
   return (
     <div className="flex items-center justify-between gap-5 mb-5 rounded-xl border border-[#252a34] bg-[#151922] p-3">
 
@@ -78,9 +80,7 @@ const TodaysPlanCard = ({ data }: TodaysPlanCardProps) => {
         </button>
 
         {/* Remove */}
-        <button className="text-gray-500 hover:text-white">
-          <FiX size={16} />
-        </button>
+       <RemoveBtn type={type} data={data}></RemoveBtn>
 
       </div>
     </div>

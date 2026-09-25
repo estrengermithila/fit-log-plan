@@ -14,7 +14,7 @@ const SaveLaterBtn = ({data}:saveBtnProps) => {
       const context = useContext(FitContext);
     
       if (!context) return null;
-      const {savePlan,setSavePlan,save,setSave} = context
+      const {savePlan,setSavePlan} = context
 
       const handleSaveBtn = ()=>{
         const newSaveBtn = savePlan.find(plan=>plan.id===data.id)
@@ -24,8 +24,8 @@ const SaveLaterBtn = ({data}:saveBtnProps) => {
         }
         else{
 setSavePlan([...savePlan,data])
-const newSave = save+1
-setSave(newSave)
+// const newSave = save+1
+// setSave(newSave)
         }
         
       }

@@ -125,6 +125,7 @@ const Plan = () => {
                   <TodaysPlanCard
                     key={data.id}
                     data={data}
+                    type="today"
                   />
                 ))}
 
@@ -204,8 +205,10 @@ const Plan = () => {
 
                 {savePlan.map((data) => (
                   <TodaysPlanCard
+             
                     key={data.id}
                     data={data}
+                     type='saved'
                   />
                 ))}
 

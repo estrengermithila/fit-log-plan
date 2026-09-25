@@ -17,7 +17,7 @@ const TodaysPlanBtn = ({data}:todaysPlanProps) => {
 
   if (!context) return null;
 
-  const { todayPlan, setTodayPlan,plan,setPlan } = context;   
+  const { todayPlan, setTodayPlan } = context;   
 
 
 const handleTodayPlan = ()=>{
@@ -30,8 +30,8 @@ if(newTodayPlanBtn){
 }
 else{
       setTodayPlan([...todayPlan,data])
-      const newPlan = plan+1
-      setPlan(newPlan)
+    //   const newPlan = plan+1
+    //   setPlan(newPlan)
 }
 
 

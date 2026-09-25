@@ -31,10 +31,10 @@ const FitProvider = ({ children }: PropsWithChildren) => {
     setTodayPlan,
     savePlan,
     setSavePlan,
-    plan,
-    setPlan,
-    save,
-    setSave
+    // plan,
+    // setPlan,
+    // save,
+    // setSave
   };
 
   return (

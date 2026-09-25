@@ -3,10 +3,14 @@ import { FitContext } from '@/context/FitProvider';
 import React, { useContext } from 'react';
 
 const PlanBtn = () => {
-    const {plan} = useContext(FitContext)
+ const context = useContext(FitContext);
+
+  if (!context) return null;
+
+  const { todayPlan } = context;
     return (
         <div>
-            <button>{plan}</button>
+            <button>{todayPlan.length}</button>
         </div>
     );
 };
