@@ -4,6 +4,7 @@ import { FiClock, FiStar, FiX } from "react-icons/fi";
 import { libraryType } from "@/type/libraryType";
 import Link from "next/link";
 import RemoveBtn from "./RemoveBtn";
+import DoneMark from "./DoneMark";
 
 interface TodaysPlanCardProps {
   data: libraryType;
@@ -75,9 +76,7 @@ const TodaysPlanCard = ({ data,type }: TodaysPlanCardProps) => {
         </Link>
 
         {/* Mark as Done */}
-        <button className="rounded-full bg-[#baff00] px-4 py-2 text-xs font-bold text-black hover:bg-[#caff33]">
-          ✓ Mark as Done
-        </button>
+      <DoneMark></DoneMark>
 
         {/* Remove */}
        <RemoveBtn type={type} data={data}></RemoveBtn>
