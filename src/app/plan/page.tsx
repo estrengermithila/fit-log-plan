@@ -109,7 +109,7 @@ const Plan = () => {
                 </p>
 
                 <Link
-                  href="/workOut"
+                  href="/"
                   className="mt-5 rounded-full bg-[#baff00] px-5 py-2 text-xs font-semibold text-black transition hover:scale-105 hover:bg-[#caff33]"
                 >
                   Go to workouts
@@ -191,7 +191,7 @@ const Plan = () => {
                 </p>
 
                 <Link
-                  href="/workOut"
+                  href="/"
                   className="mt-5 rounded-full bg-[#baff00] px-5 py-2 text-xs font-semibold text-black transition hover:scale-105 hover:bg-[#caff33]"
                 >
                   Browse workouts
